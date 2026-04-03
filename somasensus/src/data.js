@@ -12,8 +12,8 @@ export const translations = {
     booking: {
       title: "PRICING & BOOKING",
       locations: [
-        { name: "Pelgulinna Tervisemaja", prices: ["Therapeutic: 50/60€", "Sports: 50/60€", "Classic: 45/50€"] },
-        { name: "Linnamäe 37a", prices: ["Therapeutic: 45/55€", "Sports: 45/50€", "Classic: 40/45€"] }
+        { name: "Pelgulinna Tervisemaja", prices: ["Therapeutic Massage: 50/60€", "Athletic Massage: 50/60€", "Classical Massage: 45/50€"] },
+        { name: "Linnamäe 37a", prices: ["Therapeutic Massage: 45/55€", "Athletic Massage: 45/50€", "Classical Massage: 40/45€"] }
       ],
       form: { name: "Name", email: "Email", service: "Service", btn: "Book Now" }
     },
@@ -25,11 +25,11 @@ export const translations = {
     offers: {
       title: "Massage Services",
       items: [
-        { id: 1, name: "Classical", price: "45/50€", icon: "", color: "purple", desc: "A balanced treatment focused on relaxation and general muscle relief.", benefits: ["Stress reduction", "Better circulation", "General wellness", "Improved sleep quality"] },
-        { id: 2, name: "Therapeutic", price: "50/60€", icon: "", color: "purple", desc: "Designed to address specific muscle tension and physical imbalances.", benefits: ["Pain relief", "Improved posture", "Muscle recovery", "Increased joint mobility"] },
-        { id: 3, name: "Athletic", price: "50/60€", icon: "", color: "purple", desc: "Tailored for active individuals. Supports faster recovery after training.", benefits: ["Injury prevention", "Flexibility", "Fast recovery", "Lactic acid removal"] },
-        { id: 4, name: "Trigger-Point", price: "50/60€", icon: "", color: "green", desc: "Focuses on releasing tight knots within the muscles.", benefits: ["Releases knots", "Reduces referred pain", "Deep relief", "Restores muscle function"] },
-        { id: 5, name: "Lymfodrinaz", price: "60 min", icon: "", color: "green", desc: "A gentle technique to stimulate the lymphatic system.", benefits: ["Detox", "Immune support", "Reduced swelling", "Metabolism boost"] },
+        { id: 1, name: "Classical Massage", price: "45/50€", icon: "", color: "purple", desc: "A balanced treatment focused on relaxation and general muscle relief.", benefits: ["Stress reduction", "Better circulation", "General wellness", "Improved sleep quality"] },
+        { id: 2, name: "Therapeutic Massage", price: "50/60€", icon: "", color: "purple", desc: "Designed to address specific muscle tension and physical imbalances.", benefits: ["Pain relief", "Improved posture", "Muscle recovery", "Increased joint mobility"] },
+        { id: 3, name: "Athletic Massage", price: "50/60€", icon: "", color: "purple", desc: "Tailored for active individuals. Supports faster recovery after training.", benefits: ["Injury prevention", "Flexibility", "Fast recovery", "Lactic acid removal"] },
+        { id: 4, name: "Trigger-Point Massage", price: "50/60€", icon: "", color: "green", desc: "Focuses on releasing tight knots within the muscles.", benefits: ["Releases knots", "Reduces referred pain", "Deep relief", "Restores muscle function"] },
+        { id: 5, name: "Lymphatic Massage", price: "60 min", icon: "", color: "green", desc: "A gentle technique to stimulate the lymphatic system.", benefits: ["Detox", "Immune support", "Reduced swelling", "Metabolism boost"] },
         { id: 6, name: "Face Massage", price: "60 min", icon: "", color: "green", desc: "Relieve tension, improve skin tone, and provide deep relaxation.", benefits: ["Skin glow", "Tension release", "Natural lift", "Lymphatic drainage of face"] }
       ]
     },
@@ -62,8 +62,8 @@ export const translations = {
     booking: {
       title: "ЦЕНЫ И ЗАПИСЬ",
       locations: [
-        { name: "Pelgulinna Tervisemaja", prices: ["Лечебный: 50/60€", "Спортивный: 50/60€", "Классика: 45/50€"] },
-        { name: "Linnamäe 37a", prices: ["Лечебный: 45/55€", "Спортивный: 45/50€", "Классика: 40/45€"] }
+        { name: "Pelgulinna Tervisemaja", prices: ["Лечебный Массаж: 50/60€", "Спортивный Массаж: 50/60€", "Классический Массаж: 45/50€"] },
+        { name: "Linnamäe 37a", prices: ["Лечебный Массаж: 45/55€", "Спортивный: 45/50€", "Классический Массаж: 40/45€"] }
       ],
       form: { name: "Имя", email: "Email", service: "Услуга", btn: "Записаться" }
     },
@@ -71,11 +71,11 @@ export const translations = {
     offers: {
       title: "Виды массажа",
       items: [
-        { id: 1, name: "Классический", price: "45/50€", icon: "", color: "purple", desc: "Сбалансированная процедура для расслабления и снятия общего напряжения.", benefits: ["Снятие стресса", "Кровообращение", "Общее благополучие", "Улучшение качества сна"] },
-        { id: 2, name: "Лечебный", price: "50/60€", icon: "", color: "purple", desc: "Работа с конкретными болями и дисбалансом. Улучшает подвижность.", benefits: ["Снятие боли", "Осанка", "Восстановление", "Подвижность суставов"] },
-        { id: 3, name: "Спортивный", price: "50/60€", icon: "", color: "purple", desc: "Для активных людей. Подготовка к нагрузкам и восстановление.", benefits: ["Профилактика травм", "Гибкость", "Энергия", "Вывод молочной кислоты"] },
-        { id: 4, name: "Триггерный", price: "50/60€", icon: "", color: "green", desc: "Устранение мышечных узлов и зажимов через точечное давление.", benefits: ["Устранение узлов", "Снятие боли", "Глубокое облегчение", "Восстановление функций мышц"] },
-        { id: 5, name: "Лимфодренаж", price: "60 мин", icon: "", color: "green", desc: "Стимуляция лимфотока для вывода токсинов и снятия отечности.", benefits: ["Детокс", "Иммунитет", "Против отеков", "Ускорение метаболизма"] },
+        { id: 1, name: "Классический Массаж", price: "45/50€", icon: "", color: "purple", desc: "Сбалансированная процедура для расслабления и снятия общего напряжения.", benefits: ["Снятие стресса", "Кровообращение", "Общее благополучие", "Улучшение качества сна"] },
+        { id: 2, name: "Лечебный Массаж", price: "50/60€", icon: "", color: "purple", desc: "Работа с конкретными болями и дисбалансом. Улучшает подвижность.", benefits: ["Снятие боли", "Осанка", "Восстановление", "Подвижность суставов"] },
+        { id: 3, name: "Спортивный Массаж", price: "50/60€", icon: "", color: "purple", desc: "Для активных людей. Подготовка к нагрузкам и восстановление.", benefits: ["Профилактика травм", "Гибкость", "Энергия", "Вывод молочной кислоты"] },
+        { id: 4, name: "Триггерный Массаж", price: "50/60€", icon: "", color: "green", desc: "Устранение мышечных узлов и зажимов через точечное давление.", benefits: ["Устранение узлов", "Снятие боли", "Глубокое облегчение", "Восстановление функций мышц"] },
+        { id: 5, name: "Лимфодренажный Массаж", price: "60 мин", icon: "", color: "green", desc: "Стимуляция лимфотока для вывода токсинов и снятия отечности.", benefits: ["Детокс", "Иммунитет", "Против отеков", "Ускорение метаболизма"] },
         { id: 6, name: "Массаж лица", price: "60 мин", icon: "", color: "green", desc: "Снятие напряжения лицевых мышц, улучшение тонуса кожи.", benefits: ["Сияние", "Релакс", "Лифтинг-эффект", "Снятие мимических зажимов"] }
       ]
     },
@@ -99,16 +99,16 @@ export const translations = {
     nav: { about: "MEIST", services: "TEENUSED", contact: "KONTAKT", booking: "HINNAD" },
     hero: { welcome: "TERE TULEMAST", title: "Soma Sensus", subtitle: "Tunne lõõgastust. Tunne toetust. Tunne tasakaalu." },
     aboutYana: { title: "Massaažiterapeut", intro: "Yana Belova on professionaalne terapeut, kes aitab saavutada füüsilist kergust.", subtitle: "🌿 Oskused", text: "Ta loob turvalise ruumi, kus kliendid saavad stressist vabaneda ja oma kehaga uuesti ühendust saada.", skills: ["Süvakoemassaaž", "Trigerpunktide teraapia", "Lihaste hindamine", ] },
-    booking: { title: "HINNAD JA BRONEERIMINE", locations: [{ name: "Pelgulinna Tervisemaja", prices: ["Terapeutiline: 50/60€", "Spordi: 50/60€", "Klassikaline: 45/50€"] }, { name: "Linnamäe 37a", prices: ["Terapeutiline: 45/55€", "Spordi: 45/50€", "Klassikaline: 40/45€"] }], form: { name: "Nimi", email: "E-post", service: "Teenus", btn: "Broneeri" } },
+    booking: { title: "HINNAD JA BRONEERIMINE", locations: [{ name: "Pelgulinna Tervisemaja", prices: ["Terapeutiline massaaž: 50/60€", "Spordimassaaž: 50/60€", "Klassikaline massaaž: 45/50€"] }, { name: "Linnamäe 37a", prices: ["Terapeutiline Massaaž: 45/55€", "Spordimassaaž: 45/50€", "Klassikaline massaaž: 40/45€"] }], form: { name: "Nimi", email: "E-post", service: "Teenus", btn: "Broneeri" } },
     welcomeSpace: { title: "SomaSensus Ruum", text: "Minu eesmärk on, et tunneksid end hoolitsetuna ja mugavalt nagu kodus.", videoPlaceholder: "Soma Sensus" },
     offers: {
-      title: "Massaažiteenused",
+      title: "Massaaži Teenused",
       items: [
-        { id: 1, name: "Klassikaline", price: "45/50€", icon: "", color: "purple", desc: "Lõõgastav protseduur, mis parandab vereringet ja vähendab pinget.", benefits: ["Stressi vähenemine", "Vereringe", "Heaolu", "Parem unekvaliteet"] },
-        { id: 2, name: "Terapeutiline", price: "50/60€", icon: "", color: "purple", desc: "Suunatud lihaspingete ja füüsilise tasakaalustamatuse leevendamisele.", benefits: ["Valu leevendamine", "Rüht", "Taastumine", "Liigeste liikuvus"] },
-        { id: 3, name: "Spordi", price: "50/60€", icon: "", color: "purple", desc: "Mõeldud aktiivsetele inimestele koormuseks ettevalmistamiseks.", benefits: ["Vigastuste ennetamine", "Paindlikkus", "Kiire taastumine", "Piimhappe eemaldamine"] },
-        { id: 4, name: "Trigerpunktide", price: "50/60€", icon: "", color: "green", desc: "Keskendub lihasknottide vabastamisele kontrollitud surve abil.", benefits: ["Pingete vabastamine", "Valu vähendamine", "Sügav leevendus", "Lihasfunktsiooni taastamine"] },
-        { id: 5, name: "Lümfidrenaaž", price: "60 min", icon: "", color: "green", desc: "Õrn tehnika lümfisüsteemi stimuleerimiseks и tursete vähendamiseks.", benefits: ["Detoks", "Immuunsus", "Tursete vähenemine", "Ainevahetuse kiirendamine"] },
+        { id: 1, name: "Klassikaline massaaž", price: "45/50€", icon: "", color: "purple", desc: "Lõõgastav protseduur, mis parandab vereringet ja vähendab pinget.", benefits: ["Stressi vähenemine", "Vereringe", "Heaolu", "Parem unekvaliteet"] },
+        { id: 2, name: "Terapeutiline massaaž", price: "50/60€", icon: "", color: "purple", desc: "Suunatud lihaspingete ja füüsilise tasakaalustamatuse leevendamisele.", benefits: ["Valu leevendamine", "Rüht", "Taastumine", "Liigeste liikuvus"] },
+        { id: 3, name: "Spordimassaaž", price: "50/60€", icon: "", color: "purple", desc: "Mõeldud aktiivsetele inimestele koormuseks ettevalmistamiseks.", benefits: ["Vigastuste ennetamine", "Paindlikkus", "Kiire taastumine", "Piimhappe eemaldamine"] },
+        { id: 4, name: "Trigerpunktide massaaž", price: "50/60€", icon: "", color: "green", desc: "Keskendub lihasknottide vabastamisele kontrollitud surve abil.", benefits: ["Pingete vabastamine", "Valu vähendamine", "Sügav leevendus", "Lihasfunktsiooni taastamine"] },
+        { id: 5, name: "Lümfimassaaž", price: "60 min", icon: "", color: "green", desc: "Õrn tehnika lümfisüsteemi stimuleerimiseks и tursete vähendamiseks.", benefits: ["Detoks", "Immuunsus", "Tursete vähenemine", "Ainevahetuse kiirendamine"] },
         { id: 6, name: "Näomassaaž", price: "60 min", icon: "", color: "green", desc: "Näolihaste lõõgastamine ja naha tooni parandamine.", benefits: ["Naha sära", "Lõõgastus", "Loomulik lift", "Näo lümfidrenaaž"] }
       ]
     },

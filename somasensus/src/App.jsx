@@ -4,6 +4,7 @@ import { translations } from './data';
 import emailjs from '@emailjs/browser';
 
 function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [lang, setLang] = useState('ru');
   const [scrolled, setScrolled] = useState(false);
   const [selectedService, setSelectedService] = useState(null);
@@ -47,21 +48,64 @@ function App() {
   return (
     <div className="bg-[#f4f0ea] min-h-screen text-[#2c2c2c] font-sans overflow-x-hidden">
       
-      {/* НАВИГАЦИЯ */}
+{/* НАВИГАЦИЯ */}
       <nav className={`fixed w-full z-50 transition-all duration-500 p-6 flex justify-between items-center text-white ${scrolled ? 'bg-black/80 backdrop-blur-md py-4 shadow-lg' : 'bg-transparent'}`}>
         <div className="text-xl font-serif italic tracking-widest font-bold">SS</div>
+        
+        {/* Десктопное меню (скрыто на мобилках) */}
         <div className="hidden md:flex gap-12 text-xs tracking-widest font-bold uppercase">
           <a href="#about" className="hover:text-gray-300 transition">{t.nav.about}</a>
           <a href="#services" className="hover:text-gray-300 transition">{t.nav.services}</a>
           <a href="#booking" className="hover:text-gray-300 transition">{t.nav.booking}</a>
           <a href="#contact" className="hover:text-gray-300 transition">{t.nav.contact}</a>
         </div>
-        <div className="flex gap-4 text-xs font-bold bg-white/10 px-3 py-1 rounded-full">
-          <button onClick={() => setLang('ru')} className={lang === 'ru' ? 'underline' : 'opacity-70'}>RU</button>
-          <button onClick={() => setLang('et')} className={lang === 'et' ? 'underline' : 'opacity-70'}>ET</button>
-          <button onClick={() => setLang('en')} className={lang === 'en' ? 'underline' : 'opacity-70'}>EN</button>
+
+        <div className="flex items-center gap-6">
+          {/* Переключатель языков */}
+          <div className="flex gap-4 text-xs font-bold bg-white/10 px-3 py-1 rounded-full">
+            <button onClick={() => setLang('ru')} className={lang === 'ru' ? 'underline' : 'opacity-70'}>RU</button>
+            <button onClick={() => setLang('et')} className={lang === 'et' ? 'underline' : 'opacity-70'}>ET</button>
+            <button onClick={() => setLang('en')} className={lang === 'en' ? 'underline' : 'opacity-70'}>EN</button>
+          </div>
+
+          {/* Кнопка Бургер (видна только на мобилках) */}
+          <button 
+            onClick={() => setIsMenuOpen(true)} 
+            className="md:hidden text-2xl focus:outline-none"
+          >
+            ☰
+          </button>
         </div>
       </nav>
+
+      {/* МОБИЛЬНОЕ МЕНЮ (OVERLAY) */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div 
+            initial={{ x: '100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: '100%' }}
+            transition={{ type: 'tween', duration: 0.3 }}
+            className="fixed inset-0 z-[100] bg-[#2c2c2c] text-white flex flex-col p-10"
+          >
+            <div className="flex justify-between items-center mb-16">
+              <div className="text-xl font-serif italic tracking-widest font-bold">SS</div>
+              <button onClick={() => setIsMenuOpen(false)} className="text-4xl">&times;</button>
+            </div>
+            
+            <div className="flex flex-col gap-10 text-3xl font-serif uppercase tracking-widest">
+              <a href="#about" onClick={() => setIsMenuOpen(false)} className="hover:text-gray-400">{t.nav.about}</a>
+              <a href="#services" onClick={() => setIsMenuOpen(false)} className="hover:text-gray-400">{t.nav.services}</a>
+              <a href="#booking" onClick={() => setIsMenuOpen(false)} className="hover:text-gray-400">{t.nav.booking}</a>
+              <a href="#contact" onClick={() => setIsMenuOpen(false)} className="hover:text-gray-400">{t.nav.contact}</a>
+            </div>
+
+            <div className="mt-auto opacity-50 text-xs tracking-widest">
+              SOMA SENSUS — TALLINN, ESTONIA
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* HERO */}
       <section className="relative h-screen flex flex-col items-center justify-center text-center text-white overflow-hidden">
@@ -228,28 +272,74 @@ function App() {
         </h2>
       </section>
 
-      {/* CONTACT */}
-      <section id="contact" className="bg-[#5c6c4c] py-24 px-6 text-white border-t border-white/10">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
-          <div className="border border-white/30 p-10 flex flex-col justify-between min-h-[200px]">
-            <h3 className="text-2xl font-serif mb-6">Location</h3>
-            <div className="space-y-2 opacity-90 text-sm"> {t.contact.locations.map((l, i) => <p key={i}>{l}</p>)} </div>
-          </div>
-          <div className="border border-white/30 p-10 flex flex-col justify-between min-h-[200px]">
-            <h3 className="text-2xl font-serif mb-6">Working Hours</h3>
-            <div className="space-y-2 opacity-90 text-sm"> {t.contact.hours.map((h, i) => <p key={i}>{h}</p>)} </div>
-          </div>
-          <div className="border border-white/30 p-10 flex flex-col justify-between min-h-[200px]">
-            <h3 className="text-2xl font-serif mb-6">Get Social</h3>
-            <div className="flex flex-col gap-2 text-sm opacity-90">
-              <a href="https://www.instagram.com/yana.belova.physio_est/?hl=am-et" className="hover:underline" target="_blank" rel="noreferrer">Instagram</a>
-              <a href="https://www.facebook.com/p/SomaSensus-61566848969221/" className="hover:underline" target="_blank" rel="noreferrer">Facebook</a>
-              <a href="mailto:yanabelova.physio@gmail.com" className="hover:underline">yanabelova.physio@gmail.com</a>
-            </div>
-          </div>
-        </div>
-      </section>
+     {/* CONTACT */}
+<section id="contact" className="bg-[#5c6c4c] py-24 px-6 text-white border-t border-white/10">
+  <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+    
+{/* Блок с адресом */}
+<div className="border border-white/30 p-10 flex flex-col justify-between min-h-[200px]">
+  <h3 className="text-2xl font-serif mb-6">Location</h3>
+  <div className="space-y-3 opacity-90 text-sm">
+    {t.contact.locations.map((l, i) => {
+      // Если это первая строка (Таллинн, Эстония), выводим просто текст
+      if (i === 0) {
+        return <p key={i} className="block">{l}</p>;
+      }
+      // Для остальных строк делаем ссылку на карту
+      return (
+        <a 
+          key={i} 
+          href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(l + ", Tallinn, Estonia")}`}
+          target="_blank" 
+          rel="noreferrer"
+          className="block hover:text-gray-300 underline decoration-white/40 underline-offset-4 transition"
+        >
+          {l}
+        </a>
+      );
+    })}
+  </div>
+</div>
 
+    {/* Блок с часами (без изменений) */}
+    <div className="border border-white/30 p-10 flex flex-col justify-between min-h-[200px]">
+      <h3 className="text-2xl font-serif mb-6">Working Hours</h3>
+      <div className="space-y-2 opacity-90 text-sm"> 
+        {t.contact.hours.map((h, i) => <p key={i}>{h}</p>)} 
+      </div>
+    </div>
+
+    {/* Блок с соцсетями (теперь с подчеркиванием) */}
+    <div className="border border-white/30 p-10 flex flex-col justify-between min-h-[200px]">
+      <h3 className="text-2xl font-serif mb-6">Get Social</h3>
+      <div className="flex flex-col gap-4 text-sm opacity-90">
+        <a 
+          href="https://www.instagram.com/yana.belova.physio_est/?hl=am-et" 
+          className="underline decoration-white/40 underline-offset-4 hover:text-gray-300 transition" 
+          target="_blank" 
+          rel="noreferrer"
+        >
+          Instagram
+        </a>
+        <a 
+          href="https://www.facebook.com/p/SomaSensus-61566848969221/" 
+          className="underline decoration-white/40 underline-offset-4 hover:text-gray-300 transition" 
+          target="_blank" 
+          rel="noreferrer"
+        >
+          Facebook
+        </a>
+        <a 
+          href="mailto:yanabelova.physio@gmail.com" 
+          className="underline decoration-white/40 underline-offset-4 hover:text-gray-300 transition"
+        >
+          yanabelova.physio@gmail.com
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
       {/* MODAL */}
       <AnimatePresence>
         {selectedService && (
