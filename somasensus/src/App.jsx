@@ -167,10 +167,11 @@ function App() {
                     <h3 className="text-2xl font-serif mb-2">{srv.name}</h3>
                     <p className="text-sm opacity-80 line-clamp-3 mb-4">{srv.desc}</p>
                   </div>
-                  <div className="flex justify-between items-center border-t border-white/20 pt-4">
-                    <span className="text-xs uppercase font-bold tracking-widest">{srv.price}</span>
-                    <span className="text-xs border-b border-white/40 uppercase tracking-widest">Details →</span>
-                  </div>
+                  
+<div className="flex justify-between items-center border-t border-white/20 pt-4">
+  <span className="text-xs uppercase font-bold tracking-widest">{srv.price}</span>
+  <span className="text-xs border-b border-white/40 uppercase tracking-widest">{t.offers.details}</span>
+</div>
                 </div>
               </motion.div>
             ))}
@@ -272,46 +273,45 @@ function App() {
         </h2>
       </section>
 
-     {/* CONTACT */}
+{/* CONTACT */}
 <section id="contact" className="bg-[#5c6c4c] py-24 px-6 text-white border-t border-white/10">
   <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
     
-{/* Блок с адресом */}
-<div className="border border-white/30 p-10 flex flex-col justify-between min-h-[200px]">
-  <h3 className="text-2xl font-serif mb-6">Location</h3>
-  <div className="space-y-3 opacity-90 text-sm">
-    {t.contact.locations.map((l, i) => {
-      // Если это первая строка (Таллинн, Эстония), выводим просто текст
-      if (i === 0) {
-        return <p key={i} className="block">{l}</p>;
-      }
-      // Для остальных строк делаем ссылку на карту
-      return (
-        <a 
-          key={i} 
-          href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(l + ", Tallinn, Estonia")}`}
-          target="_blank" 
-          rel="noreferrer"
-          className="block hover:text-gray-300 underline decoration-white/40 underline-offset-4 transition"
-        >
-          {l}
-        </a>
-      );
-    })}
-  </div>
-</div>
-
-    {/* Блок с часами (без изменений) */}
+    {/* Блок с адресом */}
     <div className="border border-white/30 p-10 flex flex-col justify-between min-h-[200px]">
-      <h3 className="text-2xl font-serif mb-6">Working Hours</h3>
+      <h3 className="text-2xl font-serif mb-6">{t.contact.locationTitle}</h3>
+      <div className="space-y-3 opacity-90 text-sm">
+        {t.contact.locations.map((l, i) => {
+          // Если это первая строка (Таллинн), выводим просто текст
+          if (i === 0) return <p key={i} className="block">{l}</p>;
+          
+          // Для конкретных адресов делаем ссылку на карту
+          return (
+            <a 
+              key={i} 
+              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(l + ", Tallinn, Estonia")}`}
+              target="_blank" 
+              rel="noreferrer"
+              className="block hover:text-gray-300 underline decoration-white/40 underline-offset-4 transition"
+            >
+              {l}
+            </a>
+          );
+        })}
+      </div>
+    </div>
+
+    {/* Блок с часами */}
+    <div className="border border-white/30 p-10 flex flex-col justify-between min-h-[200px]">
+      <h3 className="text-2xl font-serif mb-6">{t.contact.hoursTitle}</h3>
       <div className="space-y-2 opacity-90 text-sm"> 
         {t.contact.hours.map((h, i) => <p key={i}>{h}</p>)} 
       </div>
     </div>
 
-    {/* Блок с соцсетями (теперь с подчеркиванием) */}
+    {/* Блок с соцсетями */}
     <div className="border border-white/30 p-10 flex flex-col justify-between min-h-[200px]">
-      <h3 className="text-2xl font-serif mb-6">Get Social</h3>
+      <h3 className="text-2xl font-serif mb-6">{t.contact.socialTitle}</h3>
       <div className="flex flex-col gap-4 text-sm opacity-90">
         <a 
           href="https://www.instagram.com/yana.belova.physio_est/?hl=am-et" 
