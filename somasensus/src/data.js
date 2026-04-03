@@ -107,15 +107,15 @@ export const translations = {
     nav: { about: "MEIST", services: "TEENUSED", contact: "KONTAKT", booking: "HINNAD" },
     hero: { welcome: "TERE TULEMAST", title: "Soma Sensus", subtitle: "Tunne lõõgastust. Tunne toetust. Tunne tasakaalu." },
     aboutYana: { title: "Massaažiterapeut", intro: "Yana Belova on professionaalne terapeut, kes aitab saavutada füüsilist kergust.", subtitle: "🌿 Oskused", text: "Ta loob turvalise ruumi, kus kliendid saavad stressist vabaneda ja oma kehaga uuesti ühendust saada.", skills: ["Süvakoemassaaž", "Trigerpunktide teraapia", "Lihaste hindamine", ] },
-    booking: { title: "HINNAD JA BRONEERIMINE", locations: [{ name: "Pelgulinna Tervisemaja", prices: ["Terapeutiline massaaž: 50/60€", "Spordi massaaž: 50/60€", "Klassikaline massaaž: 45/50€"] }, { name: "Linnamäe 37a", prices: ["Terapeutiline massaaž: 45/55€", "Spordi massaaž: 45/50€", "Klassikaline massaaž: 40/45€"] }], form: { name: "Nimi", email: "E-post", service: "Teenus", btn: "Broneeri" } },
+    booking: { title: "HINNAD & BRONEERING", locations: [{ name: "Pelgulinna Tervisemaja", prices: ["Terapeutiline massaaž: 50/60€", "Spordi massaaž: 50/60€", "Klassikaline massaaž: 45/50€"] }, { name: "Linnamäe 37a", prices: ["Terapeutiline massaaž: 45/55€", "Spordimassaaž: 45/50€", "Klassikaline massaaž: 40/45€"] }], form: { name: "Nimi", email: "E-post", service: "Teenus", btn: "Broneeri" } },
     welcomeSpace: { title: "SomaSensus Ruum", text: "Minu eesmärk on, et tunneksid end hoolitsetuna ja mugavalt nagu kodus.", videoPlaceholder: "Soma Sensus" },
     offers: {
-      title: "Massaažiteenused",
+      title: "Massaaži teenused",
       details: "Lähemalt →", 
       items: [
         { id: 1, name: "Klassikaline massaaž", price: "45/50€", icon: "", color: "purple", desc: "Lõõgastav protseduur, mis parandab vereringet ja vähendab pinget.", benefits: ["Stressi vähenemine", "Vereringe", "Heaolu", "Parem unekvaliteet"] },
         { id: 2, name: "Terapeutiline massaaž", price: "50/60€", icon: " ", color: "purple", desc: "Suunatud lihaspingete ja füüsilise tasakaalustamatuse leevendamisele.", benefits: ["Valu leevendamine", "Rüht", "Taastumine", "Liigeste liikuvus"] },
-        { id: 3, name: "Spordi massaaž", price: "50/60€", icon: "", color: "purple", desc: "Mõeldud aktiivsetele inimestele koormuseks ettevalmistamiseks.", benefits: ["Vigastuste ennetamine", "Paindlikkus", "Kiire taastumine", "Piimhappe eemaldamine"] },
+        { id: 3, name: "Spordimassaaž", price: "50/60€", icon: "", color: "purple", desc: "Mõeldud aktiivsetele inimestele koormuseks ettevalmistamiseks.", benefits: ["Vigastuste ennetamine", "Paindlikkus", "Kiire taastumine", "Piimhappe eemaldamine"] },
         { id: 4, name: "Trigerpunktide massaaž", price: "50/60€", icon: "", color: "green", desc: "Keskendub lihasknottide vabastamisele kontrollitud surve abil.", benefits: ["Pingete vabastamine", "Valu vähendamine", "Sügav leevendus", "Lihasfunktsiooni taastamine"] },
         { id: 5, name: "Lümfimassaaž", price: "60 min", icon: "", color: "green", desc: "Õrn tehnika lümfisüsteemi stimuleerimiseks и tursete vähendamiseks.", benefits: ["Detoks", "Immuunsus", "Tursete vähenemine", "Ainevahetuse kiirendamine"] },
         { id: 6, name: "Näomassaaž", price: "60 min", icon: "", color: "green", desc: "Näolihaste lõõgastamine ja naha tooni parandamine.", benefits: ["Naha sära", "Lõõgastus", "Loomulik lift", "Näo lümfidrenaaž"] }
