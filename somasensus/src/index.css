@@ -1,0 +1,20 @@
+@import "tailwindcss";
+/* Настройка точного соответствия макетам (Home, About, Accommodations, Contact) */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Общие стили для заголовков с засечками (как в макетах) */
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Общие стили для текста без засечек (как в макетах) */
+p, li, select, input {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
