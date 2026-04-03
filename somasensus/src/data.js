@@ -107,7 +107,7 @@ export const translations = {
     nav: { about: "MEIST", services: "TEENUSED", contact: "KONTAKT", booking: "HINNAD" },
     hero: { welcome: "TERE TULEMAST", title: "Soma Sensus", subtitle: "Tunne lõõgastust. Tunne toetust. Tunne tasakaalu." },
     aboutYana: { title: "Massaažiterapeut", intro: "Yana Belova on professionaalne terapeut, kes aitab saavutada füüsilist kergust.", subtitle: "🌿 Oskused", text: "Ta loob turvalise ruumi, kus kliendid saavad stressist vabaneda ja oma kehaga uuesti ühendust saada.", skills: ["Süvakoemassaaž", "Trigerpunktide teraapia", "Lihaste hindamine", ] },
-    booking: { title: "HINNAD & BRONEERING", locations: [{ name: "Pelgulinna Tervisemaja", prices: ["Terapeutiline massaaž: 50/60€", "Spordi massaaž: 50/60€", "Klassikaline massaaž: 45/50€"] }, { name: "Linnamäe 37a", prices: ["Terapeutiline massaaž: 45/55€", "Spordimassaaž: 45/50€", "Klassikaline massaaž: 40/45€"] }], form: { name: "Nimi", email: "E-post", service: "Teenus", btn: "Broneeri" } },
+    booking: { title: "HINNAKIRI & BRONEERING", locations: [{ name: "Pelgulinna Tervisemaja", prices: ["Terapeutiline massaaž: 50/60€", "Spordi massaaž: 50/60€", "Klassikaline massaaž: 45/50€"] }, { name: "Linnamäe 37a", prices: ["Terapeutiline massaaž: 45/55€", "Spordimassaaž: 45/50€", "Klassikaline massaaž: 40/45€"] }], form: { name: "Nimi", email: "E-post", service: "Teenus", btn: "Broneeri" } },
     welcomeSpace: { title: "SomaSensus Ruum", text: "Minu eesmärk on, et tunneksid end hoolitsetuna ja mugavalt nagu kodus.", videoPlaceholder: "Soma Sensus" },
     offers: {
       title: "Massaaži teenused",
